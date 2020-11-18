@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class IntermediateOperatorsExercise implements StreamIntermediateOperators {
@@ -31,6 +33,7 @@ public class IntermediateOperatorsExercise implements StreamIntermediateOperator
 
     @Override
     public Stream<Integer> staircase() {
-        return Stream.empty();
-    }
+//         IntStream.range(0,6).flatMap(n->IntStream.range(0,n+2).boxed().collect(Collectors.toList()));
+//        return list;
+    return staircase();}
 }
