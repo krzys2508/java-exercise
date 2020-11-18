@@ -29,12 +29,12 @@ public class StreamCreationExercise implements StreamCreator {
 
     @Override
     public DoubleStream from0Till1WithTenSteps() {
-        return DoubleStream.iterate(0,n->(n+0.1)*100).limit(11);
+        return DoubleStream.iterate(0.0,n->Math.round((n+0.1)*100.00)/100.00).limit(10);
     }
 
     @Override
     public Stream<String> alphabet() {
-        return Stream.empty();
+        return IntStream.range(65,91).mapToObj(Character::toString);
     }
 
 }

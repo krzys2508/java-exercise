@@ -8,8 +8,8 @@ public class IntermediateOperatorsExercise implements StreamIntermediateOperator
 
     @Override
     public Stream<String> wordsLongerThanFiveCharacters(List<String> words) {
-        return Stream.empty();
-    }
+        words.stream().filter(n-> n.getName)
+        return Stream.empty();}
 
     @Override
     public Stream<String> firstThreeWordsLongerThanFiveCharacters(List<String> words) {
