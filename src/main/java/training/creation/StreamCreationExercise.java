@@ -8,17 +8,18 @@ public class StreamCreationExercise implements StreamCreator {
 
     @Override
     public IntStream positiveDigitsUsingOf() {
-        return IntStream.empty();
+        return IntStream.of(1,2,3,4,5,-7,-12,-15).filter(val->val>0);
     }
 
     @Override
     public IntStream positiveDigitsUsingRange() {
-        return IntStream.empty();
+
+        return IntStream.range(-20,20).filter(val->val>0);
     }
 
     @Override
     public IntStream positiveDigitsUsingIterate() {
-        return IntStream.empty();
+        return IntStream.iterate(-20,);
     }
 
     @Override
