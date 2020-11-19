@@ -33,7 +33,6 @@ public class IntermediateOperatorsExercise implements StreamIntermediateOperator
 
     @Override
     public Stream<Integer> staircase() {
-//         IntStream.range(0,6).flatMap(n->IntStream.range(0,n+2).boxed().collect(Collectors.toList()));
-//        return list;
-    return staircase();}
+        return IntStream.range(1, 7).flatMap(n -> IntStream.range(0, n + 1)).boxed();
+    }
 }
